@@ -24,6 +24,8 @@ for sub in sub_list:
 			file_pattern=f"corr_{sub}_x-*.png",
 			save_fname=f"animation-meanimg_{sub}.gif")
 # %%
+
+# Problem here is each file metric has a different colorbar limits. This has to be fixed.
 for sub in sub_list:
 	gifify(sub=sub,
        img_dir=join(img_dir, sub),
@@ -31,12 +33,12 @@ for sub in sub_list:
        file_pattern=f"masked*{sub}*.png",
        save_fname=f"animation-masked_{sub}.gif")
 # %%
-for sub in sub_list:
-	gifify(sub='sub-0002',
-		img_dir='/Users/h/Documents/projects_local/sandbox/fmriprep_bold/sbref/',
-		save_dir='/Volumes/derivatives/fmriprep_qc/sbref/',
-		file_pattern=f"*sbref*.png",
-		save_fname=f"animation-sbref_{sub}.gif")
+# for sub in sub_list:
+# 	gifify(sub='sub-0002',
+# 		img_dir='/Users/h/Documents/projects_local/sandbox/fmriprep_bold/sbref/',
+# 		save_dir='/Volumes/derivatives/fmriprep_qc/sbref/',
+# 		file_pattern=f"*sbref*.png",
+# 		save_fname=f"animation-sbref_{sub}.gif")
 
 # %%
 # This code will parallelize the work for you if you have many subjects:
